@@ -46,22 +46,26 @@ How to build llvm-2.8 and binutils-2.20.90?
 
 How to build perfevo?
 
-1. edit ./autoconf/configure.ac
+0. tar -xvf perfevo.tar
 
-1.1. LLVM_SRC_ROOT=${LLVM_ROOT}/llvm-2.8
+1. cd perfevo
 
-1.2. LLVM_OBJ_ROOT=${LLVM_ROOT}/llvm-2.8/build
+2. edit ./autoconf/configure.ac
 
-2. cd ./autoconf
+2.1. LLVM_SRC_ROOT=${LLVM_ROOT}/llvm-2.8
 
-3. ./AutoRegen.sh        //provide llvm directory and llvm-building directory when running this command
+2.2. LLVM_OBJ_ROOT=${LLVM_ROOT}/llvm-2.8/build
 
-4. cd ..
+3. cd ./autoconf
 
-5. mkdir build
+4. ./AutoRegen.sh        //provide llvm directory and llvm-building directory when running this command
 
-6. cd build
+5. cd ..
 
-7. ../configure --with-llvmsrc=${LLVM_ROOT}/llvm-2.8 --with-llvmobj=${LLVM_ROOT}/llvm-2.8/build
+6. mkdir build
 
-8. make
+7. cd build
+
+8. ../configure --with-llvmsrc=${LLVM_ROOT}/llvm-2.8 --with-llvmobj=${LLVM_ROOT}/llvm-2.8/build
+
+9. make
